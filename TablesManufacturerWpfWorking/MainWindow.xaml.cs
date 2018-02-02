@@ -81,6 +81,7 @@ namespace TablesManufacturerWpfWorking
             TablesManufacturer a = new TablesManufacturer()
             {
 
+
                 strName = StrNameTextBox.Text,
                 strManufacturerChecklistId = StrManufacturerChecklistIdTextBox.Text
             };
