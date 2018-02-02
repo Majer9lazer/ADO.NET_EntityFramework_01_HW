@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirst", "ADO.NET_EntityFramework_01_HW\CodeFirst.csproj", "{184D4496-5C51-4F7A-B2DA-7E649C8278F0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EntityFramework_CodeFirst_TASK_01", "EntityFramework_CodeFirst_TASK_01", "{023A1631-9F2C-4E1C-8DEE-7D70E2BD762C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EntityFramework_DataBaseFirst_TASK_02", "EntityFramework_DataBaseFirst_TASK_02", "{0D1026E7-67A0-4670-8234-F35859770849}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBaseFirstApp", "DataBaseFirstApp\DataBaseFirstApp.csproj", "{DDBBF364-9945-4F06-964D-74A4CB76A277}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EntityFramework_ModeFirst_TASK_03", "EntityFramework_ModeFirst_TASK_03", "{5B8ADCDD-EE09-4AB3-A6C7-44C77FE6D395}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModeFirstApp", "ModeFirstApp\ModeFirstApp.csproj", "{840CFA1E-3196-41F7-97C1-44A19951DBB4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EntityFrameworkWpf_Task_04", "EntityFrameworkWpf_Task_04", "{AFA4FB78-94FD-4E55-B5D7-7B0B1C0CB9E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TablesManufacturerWpfWorking", "TablesManufacturerWpfWorking\TablesManufacturerWpfWorking.csproj", "{AB1615AB-C74F-4B7C-A969-8E9AC3CD1ED4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{184D4496-5C51-4F7A-B2DA-7E649C8278F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{184D4496-5C51-4F7A-B2DA-7E649C8278F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{184D4496-5C51-4F7A-B2DA-7E649C8278F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{184D4496-5C51-4F7A-B2DA-7E649C8278F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDBBF364-9945-4F06-964D-74A4CB76A277}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDBBF364-9945-4F06-964D-74A4CB76A277}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDBBF364-9945-4F06-964D-74A4CB76A277}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDBBF364-9945-4F06-964D-74A4CB76A277}.Release|Any CPU.Build.0 = Release|Any CPU
+		{840CFA1E-3196-41F7-97C1-44A19951DBB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{840CFA1E-3196-41F7-97C1-44A19951DBB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{840CFA1E-3196-41F7-97C1-44A19951DBB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{840CFA1E-3196-41F7-97C1-44A19951DBB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB1615AB-C74F-4B7C-A969-8E9AC3CD1ED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB1615AB-C74F-4B7C-A969-8E9AC3CD1ED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB1615AB-C74F-4B7C-A969-8E9AC3CD1ED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB1615AB-C74F-4B7C-A969-8E9AC3CD1ED4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{184D4496-5C51-4F7A-B2DA-7E649C8278F0} = {023A1631-9F2C-4E1C-8DEE-7D70E2BD762C}
+		{DDBBF364-9945-4F06-964D-74A4CB76A277} = {0D1026E7-67A0-4670-8234-F35859770849}
+		{840CFA1E-3196-41F7-97C1-44A19951DBB4} = {5B8ADCDD-EE09-4AB3-A6C7-44C77FE6D395}
+		{AB1615AB-C74F-4B7C-A969-8E9AC3CD1ED4} = {AFA4FB78-94FD-4E55-B5D7-7B0B1C0CB9E2}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MCSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TablesManufacturer">
+          <Key>
+            <PropertyRef Name="intManufacturerID" />
+          </Key>
+          <Property Name="intManufacturerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="strManufacturerChecklistId" Type="nvarchar" MaxLength="50" />
+          <Property Name="strName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TablesModel">
+          <Key>
+            <PropertyRef Name="intModelID" />
+          </Key>
+          <Property Name="intModelID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="strName" Type="nvarchar" MaxLength="10" />
+          <Property Name="intManufacturerID" Type="int" />
+          <Property Name="intSMCSFamilyID" Type="int" />
+          <Property Name="strImage" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <Association Name="FK_newTablesModel_newTablesModel">
+          <End Role="TablesManufacturer" Type="Self.TablesManufacturer" Multiplicity="0..1" />
+          <End Role="TablesModel" Type="Self.TablesModel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TablesManufacturer">
+              <PropertyRef Name="intManufacturerID" />
+            </Principal>
+            <Dependent Role="TablesModel">
+              <PropertyRef Name="intManufacturerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MCSModelStoreContainer">
+          <EntitySet Name="TablesManufacturer" EntityType="Self.TablesManufacturer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TablesModel" EntityType="Self.TablesModel" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_newTablesModel_newTablesModel" Association="Self.FK_newTablesModel_newTablesModel">
+            <End Role="TablesManufacturer" EntitySet="TablesManufacturer" />
+            <End Role="TablesModel" EntitySet="TablesModel" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MCSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TablesManufacturer">
+          <Key>
+            <PropertyRef Name="intManufacturerID" />
+          </Key>
+          <Property Name="intManufacturerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="strManufacturerChecklistId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="strName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TablesModels" Relationship="Self.FK_newTablesModel_newTablesModel" FromRole="TablesManufacturer" ToRole="TablesModel" />
+        </EntityType>
+        <EntityType Name="TablesModel">
+          <Key>
+            <PropertyRef Name="intModelID" />
+          </Key>
+          <Property Name="intModelID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="strName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="intManufacturerID" Type="Int32" />
+          <Property Name="intSMCSFamilyID" Type="Int32" />
+          <Property Name="strImage" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TablesManufacturer" Relationship="Self.FK_newTablesModel_newTablesModel" FromRole="TablesModel" ToRole="TablesManufacturer" />
+        </EntityType>
+        <Association Name="FK_newTablesModel_newTablesModel">
+          <End Role="TablesManufacturer" Type="Self.TablesManufacturer" Multiplicity="0..1" />
+          <End Role="TablesModel" Type="Self.TablesModel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TablesManufacturer">
+              <PropertyRef Name="intManufacturerID" />
+            </Principal>
+            <Dependent Role="TablesModel">
+              <PropertyRef Name="intManufacturerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MCSEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TablesManufacturers" EntityType="Self.TablesManufacturer" />
+          <EntitySet Name="TablesModels" EntityType="Self.TablesModel" />
+          <AssociationSet Name="FK_newTablesModel_newTablesModel" Association="Self.FK_newTablesModel_newTablesModel">
+            <End Role="TablesManufacturer" EntitySet="TablesManufacturers" />
+            <End Role="TablesModel" EntitySet="TablesModels" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MCSModelStoreContainer" CdmEntityContainer="MCSEntities">
+          <EntitySetMapping Name="TablesManufacturers">
+            <EntityTypeMapping TypeName="MCSModel.TablesManufacturer">
+              <MappingFragment StoreEntitySet="TablesManufacturer">
+                <ScalarProperty Name="intManufacturerID" ColumnName="intManufacturerID" />
+                <ScalarProperty Name="strManufacturerChecklistId" ColumnName="strManufacturerChecklistId" />
+                <ScalarProperty Name="strName" ColumnName="strName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TablesModels">
+            <EntityTypeMapping TypeName="MCSModel.TablesModel">
+              <MappingFragment StoreEntitySet="TablesModel">
+                <ScalarProperty Name="intModelID" ColumnName="intModelID" />
+                <ScalarProperty Name="strName" ColumnName="strName" />
+                <ScalarProperty Name="intManufacturerID" ColumnName="intManufacturerID" />
+                <ScalarProperty Name="intSMCSFamilyID" ColumnName="intSMCSFamilyID" />
+                <ScalarProperty Name="strImage" ColumnName="strImage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
