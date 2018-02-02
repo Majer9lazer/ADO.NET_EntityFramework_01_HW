@@ -80,11 +80,13 @@ namespace TablesManufacturerWpfWorking
          
             TablesManufacturer a = new TablesManufacturer()
             {
+
                 strName = StrNameTextBox.Text,
                 strManufacturerChecklistId = StrManufacturerChecklistIdTextBox.Text
             };
             try
             {
+
                 db.TablesManufacturers.Add(a);
                 db.SaveChanges();
                 ErrorOrSuccesTextBlockAdd.Text = "Был добавлен елемент под именем - "+a.strName;
@@ -95,6 +97,7 @@ namespace TablesManufacturerWpfWorking
             {
                 ErrorOrSuccesTextBlockAdd.Text = ex.Message;
             }
+
         }
 
         private void AcceptChangesButtonClick(object sender, RoutedEventArgs e)
