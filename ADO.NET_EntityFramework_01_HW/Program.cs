@@ -50,8 +50,8 @@ namespace ADO.NET_EntityFramework_01_HW
                         else if(a.Count == 0 && b.Count == 0)
                         {
                             StreamReader fs =
-                                new StreamReader(@"TablesManufacturers_inserts.txt");
-                            StreamReader sr = new StreamReader(@"TablesModel_inserts.txt");
+                                new StreamReader(@"C:\Users\user\Documents\Visual Studio 2017\Projects\ADO.NET_EntityFramework_01_HW\ADO.NET_EntityFramework_01_HW\TxtFiles\TablesManufacturers_inserts.txt");
+                            StreamReader sr = new StreamReader(@"C:\Users\user\Documents\Visual Studio 2017\Projects\ADO.NET_EntityFramework_01_HW\ADO.NET_EntityFramework_01_HW\TxtFiles\TablesModel_inserts.txt");
                             string tablesManufacturersInserts = fs.ReadToEnd();
                             string tablesModelInserts = sr.ReadToEnd();
                             SqlCommand cmd = new SqlCommand();

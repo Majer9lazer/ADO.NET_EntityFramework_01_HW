@@ -62,6 +62,9 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="TxtFiles\TablesManufacturers_inserts.txt" />
+    <Content Include="TxtFiles\TablesModel_inserts.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
