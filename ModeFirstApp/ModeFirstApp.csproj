@@ -102,6 +102,7 @@
       <LastGenOutput>MCS.cs</LastGenOutput>
       <DependentUpon>MCS.edmx</DependentUpon>
     </Content>
+    <Content Include="TxtFile\AboutEgor.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

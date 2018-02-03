@@ -15,7 +15,8 @@ namespace ModeFirstApp
         static void Main(string[] args)
         {
             MCSContainer db = new MCSContainer();
-            StreamReader r = new StreamReader("AboutEgor.txt", Encoding.Default);
+            //Ниже укажите путь , полный при чем 
+            StreamReader r = new StreamReader(@"C:\Users\user\Documents\Visual Studio 2017\Projects\ADO.NET_EntityFramework_01_HW\ModeFirstApp\TxtFile\AboutEgor.txt", Encoding.Default);
             string text = r.ReadToEnd();
             Console.WriteLine("Подождите минуту. Выполняется важная операция...");
             int k = 0;
